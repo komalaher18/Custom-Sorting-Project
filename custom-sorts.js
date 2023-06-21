@@ -36,6 +36,27 @@ function reverseBaseSort(arr) {
 
 function frequencySort(arr) {
   // Your code here
+  return arr.sort((a,b) => {
+    let aFreq = 0;
+    let bFreq = 0;
+    for (let i = 0; i < arr.length; i++) {
+      const num = arr[i];
+      if (a === num) aFreq++;
+      if (b === num) bFreq++;
+    }
+
+    // const aFreq = arr.reduce((acc, num) => {
+    //   if (a === num) return ++acc;
+    //   return acc;
+    // }, 0);
+    // const bFreq = arr.reduce((acc, num) => {
+    //   if (b === num) return ++acc;
+    //   return acc;
+    // }, 0);
+    if(aFreq < bFreq) return -1;
+    else if(aFreq > bFreq) return 1;
+    else return (b - a);
+  });
 }
 
 module.exports = [
