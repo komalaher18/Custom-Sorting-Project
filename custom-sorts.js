@@ -15,6 +15,10 @@ function oddEvenSort(arr) {
 
 function validAnagrams(s, t) {
   // Your code here
+  const word1 = s.split('').sort().join('');
+  const word2 = t.split('').sort().join('');
+
+  return word1 === word2;
 }
 
 function reverseBaseSort(arr) {
